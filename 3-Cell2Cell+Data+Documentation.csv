@@ -1,0 +1,76 @@
+﻿Cell2Cell:  The Churn Game,,,,,,,,,,
+Database Documentation,,,,,,,,,,
+,,,,,,,,,,
+,Note:,,"Variables whose description begins with ""Mean"" are averages calculated over the four months previously to observing churn.",,,,,,,
+,,,,,,,,,,
+Position,Variable Name,,Variable Descriptiion,N,Minimum,Maximum,Mean,Standard Deviation,,Notes
+1,customer,,Customer ID,71047,1000001,1099999,1050487.478,29199.11481,,
+2,calibrat,,Calibration sample = 1; Validation sample = 0;,71047,0,1,0.563007587,0.496017648,,Indicator of whether customer is in calibration or validation sample.
+3,churn,,Churn between 31-60 days after obs_date,71047,0,1,0.290075584,0.453800218,,1=> the customer churned; 0=> the customer did not churn.
+4,churndep,,Churn (=missing for validation sample),40000,0,1,0.5,0.50000625,,Churn variable to use as dependent variable for logistic regression.
+5,revenue,,Mean monthly revenue,70831,-6.1675,1223.38,58.85280285,44.24358324,,
+6,mou,,Mean monthly minutes of use,70831,0,7667.75,525.7283922,530.1342588,,
+7,recchrge,,Mean total recurring charge,70831,-11.29,399.99,46.8763042,23.91509477,,The recurring charge is the basic rate for the customer's calling plan.
+8,directas,,Mean number of director assisted calls,70831,0,159.39,0.894027403,2.19770883,,
+9,overage,,Mean overage minutes of use,70831,0,4320.75,40.09536079,96.34710282,,Overage represents calls or minutes of use over the number of minutes allowed by that customer's calling plan.
+10,roam,,Mean number of roaming calls,70831,0,1112.4475,1.221071247,9.08108861,,
+11,changem,,% Change in minutes of use,70545,-3875,5192.25,-10.84646089,255.3143148,,
+12,changer,,% Change in revenues,70545,-1107.74,2483.4825,-1.205634205,38.77029226,,
+13,dropvce,,Mean number of dropped voice calls,71047,0,221.6666667,6.00996758,9.006124595,,
+14,blckvce,,Mean number of blocked voice calls,71047,0,384.3333333,4.067833031,10.67078555,,
+15,unansvce,,Mean number of unanswered voice calls,71047,0,848.6666667,28.3559029,38.90424823,,
+16,custcare,,Mean number of customer care calls,71047,0,365.6666667,1.865917397,5.160761938,,"Customer Care handles customer calls regarding complaints, questions, etc."
+17,threeway,,Mean number of threeway calls,71047,0,66,0.300167495,1.161560303,,
+18,mourec,,Mean unrounded mou received voice calls,71047,0,3287.25,114.9353257,166.3057292,,
+19,outcalls,,Mean number of outbound voice calls,71047,0,644.3333333,25.39652624,35.14751212,,
+20,incalls,,Mean number of inbound voice calls,71047,0,519.3333333,8.176798457,16.51905923,,
+21,peakvce,,Mean number of in and out peak voice calls,71047,0,2090.666667,90.58094642,104.9148661,,
+22,opeakvce,,Mean number of in and out off-peak voice calls,71047,0,1572.666667,67.81841832,93.32899044,,
+23,dropblk,,Mean number of dropped or blocked calls,71047,0,489.6666667,10.1497436,15.46058152,,
+24,callfwdv,,Mean number of call forwarding calls,71047,0,81.33333333,0.011837235,0.562186873,,
+25,callwait,,Mean number of call waiting calls,71047,0,212.6666667,1.853033907,5.556201766,,
+26,months,,Months in Service,71047,6,61,18.75082692,9.787568466,,# of months the customer has had service.
+27,uniqsubs,,Number of Uniq Subs,71047,1,196,1.529550861,1.131774041,,Number of individuals listed with the account.
+28,actvsubs,,Number of Active Subs,71047,0,53,1.351654539,0.66004932,,Number of individuals listed with the account who actively use the service.
+29,phones,,# Handsets Issued,71046,1,28,1.808616952,1.33612025,,
+30,models,,# Models Issued,71046,1,16,1.561790952,0.908280483,,
+31,eqpdays,,Number of days of the current equipment,71046,-5,1823,380.2656307,254.2946923,,
+32,age1,,Age of first HH member,69803,0,99,31.37511282,22.08219498,,
+33,age2,,Age of second HH member,69803,0,99,21.15771528,23.91758552,,
+34,children,,Presence of children in HH,71047,0,1,0.242388841,0.428531301,,
+35,credita,,Highest credit rating - a,71047,0,1,0.104437907,0.305829932,,
+36,creditaa,,High credit rating - aa,71047,0,1,0.128478331,0.334624006,,
+37,prizmrur,,Prizm code is rural,71047,0,1,0.047743043,0.213223557,,"Prizm data classifies the customer's location by rural, suburban, or town."
+38,prizmub,,Prizm code is suburban,71047,0,1,0.321111377,0.466906767,,
+39,prizmtwn,,Prizm code is town,71047,0,1,0.148422875,0.355521173,,
+40,refurb,,Handset is refurbished,71047,0,1,0.139611806,0.346586267,,
+41,webcap,,Hanset is web capable,71047,0,1,0.902810815,0.296217289,,
+42,truck,,Subscriber owns a truck,71047,0,1,0.187214098,0.390086043,,
+43,rv,,Subscriber owns a recreational vehicle,71047,0,1,0.081199769,0.273143583,,
+44,occprof,,Occupation - professional,71047,0,1,0.173898968,0.379025249,,
+45,occcler,,Occupation - clerical,71047,0,1,0.020057145,0.140196765,,
+46,occcrft,,Occupation - crafts,71047,0,1,0.029642349,0.16959978,,
+47,occstud,,Occupation - student,71047,0,1,0.007572452,0.086690344,,
+48,occhmkr,,Occupation - homemaker,71047,0,1,0.003152842,0.056061986,,
+49,occret,,Occupation - retired,71047,0,1,0.014511521,0.119587364,,
+50,occself,,Occupation - self-employed,71047,0,1,0.017833265,0.132346086,,
+51,ownrent,,Home ownership is missing,71047,0,1,0.331921123,0.470906161,,
+52,marryun,,Marital status unknown,71047,0,1,0.384815685,0.486555142,,
+53,marryyes,,Married,71047,0,1,0.365377848,0.481539344,,
+54,mailord,,Buys via mail order,71047,0,1,0.361971653,0.480574059,,
+55,mailres,,Responds to mail offers,71047,0,1,0.377201008,0.484689296,,
+56,mailflag,,Has chosen not to be solicited by mail,71047,0,1,0.014412994,0.119186659,,
+57,travel,,Has traveled to non-US country,71047,0,1,0.057483075,0.232764974,,
+58,pcown,,Owns a personal computer,71047,0,1,0.185412473,0.388634551,,
+59,creditcd,,Possesses a credit card,71047,0,1,0.676425465,0.467843068,,
+60,retcalls,,Number of calls previously made to retention team,71047,0,4,0.037003674,0.20582259,,"The retention team handles calls from customers considering whether to renew, reporting competitive offers, etc."
+61,retaccpt,,Number of previous retention offers accepted,71047,0,4,0.017917716,0.14148458,,Retention team may make a retention offer to encourage customer to stay.
+62,newcelly,,Known to be a new cell phone user,71047,0,1,0.1929427,0.394611209,,
+63,newcelln,,Known not to be a new cell phone user,71047,0,1,0.13878137,0.345720673,,
+64,refer,,Number of referrals made by subscriber,71047,0,35,0.05085366,0.290443694,,
+65,incmiss,,Income data is missing,71047,0,1,0.249834617,0.432920222,,
+66,income,,Income (0=>missing),71047,0,9,4.334229454,3.137063069,,
+67,mcycle,,Owns a motorcycle,71047,0,1,0.013455881,0.115217218,,
+68,setprcm,,Missing data on handset price,71047,0,1,0.566512309,0.495559854,,
+69,setprc,,Handset price (0=>missing),71047,0,499.9899902,35.79858037,57.04096076,,
+70,retcall,,Customer has made made call to retention team,71047,0,1,0.034033809,0.181317322,,"The retention team handles calls from customers considering whether to renew, reporting competitive offers, etc."

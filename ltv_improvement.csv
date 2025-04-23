@@ -1,0 +1,6 @@
+,Segment,Avg Revenue,% Customers,Churn Rate,Baseline LTV,Improved LTV,Max Incentive
+0,Very Low,$19,24.64%,3.4%,$194,$197,$3
+1,Low,$37,35.14%,3.48%,$375,$380,$5
+2,Medium,$58,15.43%,2.71%,$583,$605,$23
+3,High,$79,7.44%,3.9%,$797,$797,$1
+4,Very High,$187,16.91%,3.81%,$1883,$1889,$7
